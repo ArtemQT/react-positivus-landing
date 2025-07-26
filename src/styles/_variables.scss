@@ -1,0 +1,33 @@
+:root {
+
+  // Colors
+  --color-dark: #000000;
+  --color-dark-alt: #292A32;
+  --color-light: #FFFFFF;
+  --color-gray: #F3F3F3;
+  --color-accent: #B9FF66;
+
+  // Fonts
+  --font-family: "Space Grotesk", sans-serif;
+
+  // Transitions
+  --transition-duration: 0.2s;
+
+  // Borders
+  --border-radius-default: 14px;
+  --border-radius-large: 45px;
+  --border: 1px solid var(--color-dark);
+
+  // Paddings
+  --section-padding-block: 70px;
+
+  // Util container parameters
+  --container-width: 1240px;
+  --container-padding-inline: 20px;
+
+  // UI parameters
+  --button-height: 70px;
+  --input-height: 60px;
+  --shadow: 0 5px 0 0 #191A23;
+
+}

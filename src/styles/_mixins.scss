@@ -1,0 +1,66 @@
+@use  "sass:math";
+
+@mixin fluid-text($min, $max){
+  $maxViewportWidth: 1440;
+  $minViewportWidth: 390;
+
+  $maxSize: math.div($max, 16);
+  $minSize: math.div($min, 16);
+  $maxWidth: math.div($maxViewportWidth, 16);
+  $minWidth: math.div($minViewportWidth, 16);
+
+  $slope: math.div(($maxSize - $minSize), ($maxWidth - $minWidth));
+  $yAxisIntersection: -$minWidth * $slope + $minSize;
+
+  font-size: clamp(
+    #{$minSize * 1rem},
+    #{$yAxisIntersection * 1rem} + #{$slope * 100vw},
+    #{$maxSize * 1rem}
+  );
+}
+
+@mixin flex-center($is-inline: false) {
+  @if(is-inline) {
+    display: inline-flex;
+  } @else {
+    display: flex;
+  }
+
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin abs-center() {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@mixin square($param) {
+  width: #{$param}px;
+  height: #{$param}px;
+}
+
+@mixin reset-link{
+  text-decoration: none;
+  color: inherit;
+}
+
+@mixin reset-button {
+  border: none;
+  background-color: transparent;
+}
+
+@mixin visually-hidden(){
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  margin: -1px !important;
+  border: 0 !important;
+  padding: 0 !important;
+  white-space: nowrap !important;
+  clip-path: inset(100%) !important;
+  clip: rect(0 0 0 0) !important;
+  overflow: hidden !important;
+}
