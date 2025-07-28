@@ -1,0 +1,66 @@
+@use '@styles/mixins' as *;
+@use '@styles/media' as *;
+@use '@styles/functions' as *;
+
+.header__nav {
+
+	margin-left: auto;
+
+	&List {
+        display: flex;
+		align-items: center;
+		column-gap: rem(40);
+
+		@include desktop {
+			column-gap: rem(20);
+		}
+
+	}
+
+	&Item {
+
+	}
+
+	&Link {
+		position: relative;
+		padding-block: rem(20);
+		@include fluid-text(14, 20);
+		line-height: 1.4;
+
+		&::after{
+			content: '';
+
+			position: absolute;
+			bottom: 20%;
+			left: 0;
+
+			display: block;
+			background-color: var(--color-dark);
+			height: rem(2);
+			width: 0;
+
+			transition: width var(--transition-duration);
+
+		}
+
+		@include hover{
+			color: var(--color-accent);
+			&::after{
+				width: 100%;
+			}
+		}
+	}
+}
+
+.header__navModal {
+	@include flex-center();
+
+	&List {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		row-gap: rem(20);
+	}
+}
+

@@ -1,0 +1,12 @@
+@use '@styles/media' as *;
+@use '@styles/functions' as *;
+
+.logo{
+	@include laptop {
+		width: rem(120);
+	}
+	@include mobile {
+		width: rem(220);
+	}
+
+}

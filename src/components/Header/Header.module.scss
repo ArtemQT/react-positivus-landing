@@ -1,0 +1,29 @@
+@use '@styles/media' as *;
+@use '@styles/functions' as *;
+
+.header {
+	padding-top: rem(60);
+    display: flex;
+	justify-content: space-between;
+	align-items: center;
+	column-gap: rem(40);
+
+	@include desktop {
+		padding-top: rem(30);
+	}
+
+	@include laptop {
+		padding-top: rem(15);
+		column-gap: rem(20);
+	}
+
+	@include mobile {
+		column-gap: rem(0);
+	}
+
+	& &Button {
+		@include laptop {
+			padding: rem(10) rem(15);
+		}
+	}
+}

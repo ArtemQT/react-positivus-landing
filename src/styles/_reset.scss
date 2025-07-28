@@ -11,7 +11,7 @@
   Убираем внутренние отступы слева тегам списков,
   у которых есть атрибут class
  */
-:where(ul, ol):where([class]) {
+ul, ol{
   padding-left: 0;
 }
 
@@ -39,7 +39,7 @@ body,
   ul,
   ol,
   dl
-):where([class]) {
+) {
   margin-block: 0;
 }
 
@@ -56,7 +56,7 @@ body,
   Убираем стандартный маркер маркированному списку,
   у которого есть атрибут class
  */
-:where(ul[class]) {
+ul {
   list-style: none;
 }
 

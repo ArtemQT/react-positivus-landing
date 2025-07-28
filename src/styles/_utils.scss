@@ -13,6 +13,12 @@
 
 .mobile-hidden {
   @include mobile {
-    display: none; !important;
+    display: none !important;
+  }
+}
+
+.mobile-show {
+  @include mobile-above {
+    display: none !important;
   }
 }
