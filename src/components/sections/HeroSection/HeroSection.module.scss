@@ -1,0 +1,21 @@
+@use '@styles/mixins' as *;
+@use '@styles/functions' as *;
+@use '@styles/media' as *;
+
+.hero{
+
+	&__wrapper {
+		padding-block: var(--section-padding-block);
+
+
+	}
+
+	&__body {
+		margin-bottom: rem(70);
+
+		display: flex;
+		justify-content: space-between;
+	}
+
+
+}

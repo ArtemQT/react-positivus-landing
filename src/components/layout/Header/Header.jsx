@@ -1,10 +1,10 @@
 import styles from './Header.module.scss';
 
-import Logo from "@components/Logo/Logo.jsx";
-import HeaderNavigation from "@components/HeaderNavigation/HeaderNavigation.jsx";
-import Button from "@components/Button/Button.jsx";
-import BurgerButton from "@components/BurgerButton/BurgerButton.jsx";
-import MobileMenu from "@components/MobileMenu/MobileMenu.jsx";
+import Logo from "@components/layout/Header/Logo/Logo.jsx";
+import HeaderNavigation from "@components/layout/Header/HeaderNavigation/HeaderNavigation.jsx";
+import Button from "@components/ui/Button/Button.jsx";
+import BurgerButton from "@components/layout/Header/BurgerButton/BurgerButton.jsx";
+import MobileMenu from "@components/layout/Header/MobileMenu/MobileMenu.jsx";
 
 import {createPortal} from "react-dom";
 import {useState} from "react";

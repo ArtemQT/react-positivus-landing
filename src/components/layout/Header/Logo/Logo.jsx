@@ -1,6 +1,6 @@
 import styles from './Logo.module.scss';
 
-import logo from '@assets/images/logo.svg'
+import logo from '@assets/icons/logo.svg'
 
 export default function Logo(props) {
 	return (

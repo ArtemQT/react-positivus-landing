@@ -1,6 +1,6 @@
 import styles from './MobileMenu.module.scss'
 
-import HeaderNavigation from "@components/HeaderNavigation/HeaderNavigation.jsx";
+import HeaderNavigation from "@components/layout/Header/HeaderNavigation/HeaderNavigation.jsx";
 
 export default function MobileMenu({onClose}) {
 	return (

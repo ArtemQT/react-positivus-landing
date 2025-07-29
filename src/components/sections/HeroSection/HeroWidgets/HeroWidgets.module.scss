@@ -1,0 +1,11 @@
+.widgets{
+
+	&__list {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	&__item{
+		filter: grayscale(100%);
+	}
+}
