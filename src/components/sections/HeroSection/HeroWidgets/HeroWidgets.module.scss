@@ -1,11 +1,41 @@
+@use '@styles/media' as *;
+@use "@styles/functions" as *;
+
+
 .widgets{
 
 	&__list {
-		display: flex;
-		justify-content: space-between;
+		display: grid;
+		grid-template-columns: repeat(6, 1fr);
+		align-items: center;
+
+		@include laptop {
+			grid-template-columns: repeat(3, 1fr);
+		}
+
+		@include mobile {
+			column-gap: rem(90);
+			overflow-x: hidden;
+		}
 	}
 
 	&__item{
 		filter: grayscale(100%);
+
+		@include laptop {
+			justify-self: center;
+		}
+
+		@include mobile {
+
+			&:nth-child(-n+3) {
+				justify-self: end;
+				margin-right: -50px;
+			}
+			&:nth-child(n+4) {
+				justify-self: start;
+				margin-left: -50px;
+			}
+		}
 	}
 }

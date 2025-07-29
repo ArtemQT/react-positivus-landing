@@ -1,0 +1,43 @@
+@use '@styles/mixins' as *;
+@use '@styles/functions' as *;
+@use '@styles/media' as *;
+
+.content {
+	display: contents;
+
+	@include mobile-above {
+		max-width: rem(530);
+		display: flex;
+		flex-direction: column;
+		row-gap: rem(35);
+	}
+
+	&__title {
+		@include mobile {
+			order: 1;
+			text-align: center;
+		}
+
+		@include mobile-s {
+			text-align: left;
+		}
+	}
+
+	&__description {
+		@include fluid-text(16, 20);
+
+		@include mobile {
+			order: 3;
+			margin-bottom: rem(40);
+		}
+	}
+
+	&__button {
+		align-self: start;
+
+		@include mobile {
+			order: 4;
+			align-self: normal;
+		}
+	}
+}

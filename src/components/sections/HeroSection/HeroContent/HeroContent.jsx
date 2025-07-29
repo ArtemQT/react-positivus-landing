@@ -1,4 +1,4 @@
-import styles from "./HeroContenty.module.scss";
+import styles from "./HeroContent.module.scss";
 
 import Button from "@components/ui/Button/Button.jsx";
 

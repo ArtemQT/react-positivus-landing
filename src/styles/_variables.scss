@@ -1,3 +1,5 @@
+@use '@styles/media' as *;
+
 :root {
 
   // Colors
@@ -20,6 +22,10 @@
 
   // Paddings
   --section-padding-block: 70px;
+
+  @include laptop {
+    --section-padding-block: 30px;
+  }
 
   // Util container parameters
   --container-width: 1240px;

@@ -7,7 +7,6 @@
 	&__wrapper {
 		padding-block: var(--section-padding-block);
 
-
 	}
 
 	&__body {
@@ -15,6 +14,14 @@
 
 		display: flex;
 		justify-content: space-between;
+		column-gap: rem(20);
+
+		@include mobile {
+			flex-direction: column;
+			align-items: center;
+
+			margin-bottom: rem(60);
+		}
 	}
 
 
