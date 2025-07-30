@@ -1,3 +1,10 @@
-.sectionDescription {
+@use '@styles/media' as *;
+@use '@styles/functions' as *;
 
+.sectionDescription {
+	max-width: rem(580);
+
+	@include mobile {
+		text-align: center;
+	}
 }

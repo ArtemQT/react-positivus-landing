@@ -9,6 +9,14 @@
 		justify-content: space-between;
 
 		padding: rem(50);
+
+		@include laptop {
+			display: grid;
+			grid-template-columns: repeat(2, 1fr);
+			row-gap: rem(30);
+		}
+
+
 	}
 
 	&Body {
@@ -16,10 +24,16 @@
 		flex-direction: column;
 		row-gap: rem(90);
 		justify-content: space-between;
+
+		@include laptop {
+			display: contents;
+		}
 	}
 
 	&Title {
-
+		@include laptop {
+			grid-column: 1 / 4;
+		}
 	}
 
 	&Link {
@@ -28,6 +42,16 @@
 		display: inline-flex;
 		align-items: center;
 		column-gap: rem(15);
+
+		@include laptop {
+			align-self: end;
+		}
+
+		>span {
+			@include laptop {
+				display: none;
+			}
+		}
 
 		>img {
 			transition-duration: var(--transition-duration);
@@ -44,6 +68,21 @@
 	&Banner {
 		width: rem(210);
 		height: rem(190);
+
+		@include desktop {
+			width: rem(165);
+			height: auto;
+		}
+
+		@include mobile {
+			width: rem(210);
+			height: rem(190);
+		}
+
+		@include mobile-s {
+			min-width: rem(165);
+			max-height: rem(129);
+		}
 	}
 }
 

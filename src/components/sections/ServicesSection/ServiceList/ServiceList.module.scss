@@ -7,6 +7,11 @@
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
 		gap: rem(40);
+
+		@include mobile {
+			grid-template-columns: 1fr;
+			gap: rem(30);
+		}
 	}
 
 	&Item {
