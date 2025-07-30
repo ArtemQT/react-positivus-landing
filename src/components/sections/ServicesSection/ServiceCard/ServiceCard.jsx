@@ -1,6 +1,5 @@
 import styles from './ServiceCard.module.scss'
 
-
 export default function ServiceCard({span1, span2, titleColor, img, arrowLinkImg, linkColor}) {
 
 	const spanClassname = `${titleColor === 'accent' ? 'puddleBgAccent' : 'puddleBgDefault' }`;

@@ -9,7 +9,7 @@ import ServiceContact from "@components/sections/ServicesSection/ServiceContact/
 export default function ServicesSection() {
 	return (
 		<section className='section container'>
-			<SectionHeader className={styles.section__header}>
+			<SectionHeader>
 				<SectionTitle>Services</SectionTitle>
 				<SectionDescription>
 					At our digital marketing agency, we offer a range of services to
