@@ -1,0 +1,43 @@
+@use "@styles/functions" as *;
+@use "@styles/media" as *;
+
+.service {
+
+	&List {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: rem(40);
+	}
+
+	&Item {
+		border: var(--border);
+		border-radius: var(--border-radius-large);
+		box-shadow: var(--shadow);
+
+		transition-duration: var(--transition-duration);
+
+		@include hover {
+			transform: translateY(rem(-15));
+		}
+
+		&:nth-child(1){
+			background-color: var(--color-light);
+		}
+		&:nth-child(2){
+			background-color: var(--color-accent);
+		}
+		&:nth-child(3){
+			background-color: var(--color-dark);
+		}
+		&:nth-child(4){
+			background-color: var(--color-light);
+		}
+		&:nth-child(5){
+			background-color: var(--color-accent);
+		}
+		&:nth-child(6){
+			background-color: var(--color-dark);
+		}
+	}
+
+}

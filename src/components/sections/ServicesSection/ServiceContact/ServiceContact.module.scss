@@ -1,0 +1,38 @@
+@use "@styles/functions" as *;
+@use "@styles/mixins" as *;
+@use "@styles/media" as *;
+
+.wrapper {
+	margin-top: rem(125);
+
+	padding-inline: rem(60);
+	border-radius: var(--border-radius-large);
+	background-color: var(--color-gray);
+
+	display: flex;
+	column-gap: rem(185);
+	align-items: center;
+
+	&__body {
+		display: flex;
+		flex-direction: column;
+		row-gap: rem(25);
+
+		>h3 {
+
+		}
+
+		>p{
+			width: rem(500);
+
+		}
+
+		>button{
+			align-self: start;
+		}
+	}
+
+	>img {
+		margin-block: rem(-25);
+	}
+}

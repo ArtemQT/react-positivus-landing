@@ -1,0 +1,9 @@
+@use '@styles/functions' as *;
+
+.sectionTitle {
+	font-weight: 500;
+
+	background-color: var(--color-accent);
+	border-radius: var(--border-radius-small);
+	padding-inline: rem(7)
+}

@@ -1,0 +1,8 @@
+@use '@styles/functions' as *;
+
+.sectionHeader {
+	display: flex;
+	column-gap: rem(40);
+
+	margin-bottom: rem(85);
+}

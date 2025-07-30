@@ -7,7 +7,7 @@ import HeroContent from "@components/sections/HeroSection/HeroContent/HeroConten
 export default function HeroSection() {
 
 	return (
-		<section className={'container'}>
+		<section className={'section container'}>
 			<div className={styles.hero__wrapper}>
 				<div className={styles.hero__body}>
 					<HeroContent />

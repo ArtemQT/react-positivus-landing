@@ -1,0 +1,56 @@
+@use "@styles/functions" as *;
+@use "@styles/mixins" as *;
+@use "@styles/media" as *;
+
+.card {
+
+	&Wrapper {
+		display: flex;
+		justify-content: space-between;
+
+		padding: rem(50);
+	}
+
+	&Body {
+		display: flex;
+		flex-direction: column;
+		row-gap: rem(90);
+		justify-content: space-between;
+	}
+
+	&Title {
+
+	}
+
+	&Link {
+		@include fluid-text(16, 20);
+
+		display: inline-flex;
+		align-items: center;
+		column-gap: rem(15);
+
+		>img {
+			transition-duration: var(--transition-duration);
+		}
+
+		@include hover {
+			>img {
+				transform: rotate(360deg);
+			}
+		}
+
+	}
+
+	&Banner {
+		width: rem(210);
+		height: rem(190);
+	}
+}
+
+.dark {
+	color: var(--color-dark);
+}
+
+.light {
+	color: var(--color-light);
+}
