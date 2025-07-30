@@ -1,0 +1,9 @@
+@use '@styles/functions' as *;
+
+.studiesList {
+	display: flex;
+
+	padding: rem(70) rem(60);
+	background-color: var(--color-dark);
+	border-radius: var(--border-radius-large);
+}

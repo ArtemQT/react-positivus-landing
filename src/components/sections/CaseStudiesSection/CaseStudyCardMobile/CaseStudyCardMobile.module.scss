@@ -2,44 +2,34 @@
 @use '@styles/media' as *;
 
 .card {
-	min-width: rem(260);
-
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
+	align-items: center;
 	row-gap: rem(20);
 
-	$paddingCard : rem(64);
-	@include laptop {
-		$paddingCard : rem(32);
-	}
-
-	&:first-child {
-		padding-right: $paddingCard;
-
-	}
-	&:last-child {
-		padding-left: $paddingCard;
-	}
-
-	&:not(:last-child):not(:first-child) {
-		padding-inline: $paddingCard;
-		border-right: 1px solid var(--color-light);
-		border-left: 1px solid var(--color-light);
-	}
+	padding: rem(42) rem(50);
+	background-color: var(--color-dark);
+	border-radius: var(--border-radius-large);
 
 	&Description {
 		color: var(--color-light);
+
+		@include mobile-s-above {
+			max-width: rem(500);
+		}
 	}
 
 	&Link{
-		align-self: start;
-
 		display: inline-flex;
 		align-items: center;
 		column-gap: rem(15);
 
 		color: var(--color-accent);
+
+		@include mobile-s {
+			align-self: start;
+		}
 
 		position: relative;
 		&:after {

@@ -1,7 +1,16 @@
 import styles from './CaseStudiesContent.module.scss'
+
 import CaseStudyCard from "@components/sections/CaseStudiesSection/CaseStudyCard/CaseStudyCard.jsx";
+import CaseStudiesDesktopList
+	from "@components/sections/CaseStudiesSection/CaseStudiesDesktopList/CaseStudiesDesktopList.jsx";
+
+import {useMediaQuery} from "react-responsive";
+import CaseStudiesMobileList
+	from "@components/sections/CaseStudiesSection/CaseStudiesMobileList/CaseStudiesMobileList.jsx";
 
 export default function CaseStudiesContent() {
+
+	const isLaptop = useMediaQuery({query: '(max-width: 1024px)'});
 
 	const caseStudiesList = [
 		'For a local restaurant, we implemented a targeted PPC campaign that resulted in a 50% increase in website traffic and a 25% increase in sales.',
@@ -10,12 +19,13 @@ export default function CaseStudiesContent() {
 	];
 
 	return (
-		<ul className={styles.studiesList}>
+		<>
 			{
-				caseStudiesList.map((studyCase, index) =>
-					<CaseStudyCard key={index} description={studyCase} />
-				)
+				isLaptop ?
+					<CaseStudiesMobileList caseStudiesList={caseStudiesList}/>
+					:
+					<CaseStudiesDesktopList caseStudiesList={caseStudiesList}/>
 			}
-		</ul>
-	);
+		</>
+	)
 }

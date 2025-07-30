@@ -1,10 +1,10 @@
-import styles from './CaseStudyCard.module.scss'
+import styles from './CaseStudyCardMobile.module.scss'
 
-import linkArrow from '@assets/icons/case-studies-arrow.svg'
+import linkArrow from "@assets/icons/case-studies-arrow.svg";
 
-export default function CaseStudyCard({description}) {
+export default function CaseStudyCardMobile({description}) {
 	return (
-		<li className={styles.card}>
+		<div className={styles.card}>
 			<p className={styles.cardDescription}>
 				{description}
 			</p>
@@ -18,6 +18,6 @@ export default function CaseStudyCard({description}) {
 				     loading='lazy'
 				/>
 			</a>
-		</li>
+		</div>
 	);
 }
