@@ -1,0 +1,17 @@
+@use '@styles/mixins' as *;
+@use '@styles/functions' as *;
+@use '@styles/media' as *;
+
+.teamList {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: rem(40);
+
+	@include desktop {
+		grid-template-columns: repeat(2, 1fr);
+	}
+
+	@include mobile {
+		grid-template-columns: 1fr;
+	}
+}

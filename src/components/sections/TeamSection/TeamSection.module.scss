@@ -1,0 +1,19 @@
+@use '@styles/mixins' as *;
+@use '@styles/functions' as *;
+@use '@styles/media' as *;
+
+.contentWrapper {
+	display: flex;
+	flex-direction: column;
+	row-gap: rem(40);
+
+	>button {
+		width: rem(270);
+		align-self: end;
+
+		@include mobile {
+			align-self: center;
+			width: 100%;
+		}
+	}
+}

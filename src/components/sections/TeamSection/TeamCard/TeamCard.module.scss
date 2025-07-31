@@ -1,0 +1,61 @@
+@use '@styles/mixins' as *;
+@use '@styles/functions' as *;
+@use '@styles/media' as *;
+
+.member {
+
+	&Card {
+		padding: rem(40) rem(35);
+		border-radius: var(--border-radius-large);
+		border: var(--border);
+		box-shadow: var(--shadow);
+		height: 100%;
+
+		transition-duration: var(--transition-duration);
+
+		@include hover {
+			transform: translateY(rem(-15));
+		}
+	}
+
+	&Header {
+		display: flex;
+	}
+
+	&Description {
+		margin-left: rem(20);
+		align-self: end;
+	}
+
+	&Img {
+		transition-duration: var(--transition-duration);
+
+		@include hover {
+			transform: scale(1.1);
+		}
+	}
+
+	&Title {
+
+	}
+
+	&Post {
+
+	}
+
+	&Link {
+		flex-shrink: 0;
+		align-self: start;
+		margin-left: auto;
+
+		@include hover {
+			transform: scale(1.1);
+		}
+	}
+
+	&Summary {
+		padding-top: rem(28);
+		margin-top: rem(28);
+		border-top: var(--border);
+	}
+}
