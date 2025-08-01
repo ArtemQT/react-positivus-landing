@@ -1,0 +1,27 @@
+@use '@styles/mixins' as *;
+@use '@styles/functions' as *;
+@use '@styles/media' as *;
+
+.input {
+	height: var(--input-height);
+	border-radius: var(--border-radius-default);
+	padding-inline: rem(30);
+	outline: none;
+	border: var(--border);
+
+	&::placeholder {
+		color: var(--color-dark-gray);
+	}
+
+	&:focus {
+		border-color: var(--color-accent);
+	}
+
+	&Field {
+		display: flex;
+		flex-direction: column;
+		row-gap: rem(5);
+
+
+	}
+}

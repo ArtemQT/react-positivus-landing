@@ -1,0 +1,94 @@
+@use '@styles/mixins' as *;
+@use '@styles/functions' as *;
+@use '@styles/media' as *;
+
+.wrapper {
+
+	overflow: hidden;
+	position: relative;
+
+	&::after {
+		content: '';
+
+		position: absolute;
+		top: 50%;
+		right: 0;
+		translate: 55% -50%;
+
+		width: rem(690);
+		height: rem(650);
+
+		background: url('@assets/images/contact-us-Illustration.svg') center/cover no-repeat;
+	}
+
+	@include laptop {
+		&::after {
+			display: none;
+		}
+	}
+
+	@include mobile-above {
+		border-radius: var(--border-radius-large);
+		padding: rem(60) rem(100) rem(80) rem(100);
+		background-color: var(--color-gray);
+	}
+}
+
+.contactUsForm {
+	display: flex;
+	flex-direction: column;
+
+	row-gap: rem(45);
+
+	max-width: rem(555);
+
+	@include laptop {
+		min-width: 100%;
+	}
+
+	@include mobile {
+
+		row-gap: rem(30);
+	}
+
+	&Body {
+		display: flex;
+		flex-direction: column;
+		row-gap: rem(25);
+
+		@include mobile {
+			row-gap: rem(20);
+			padding: rem(40) rem(30);
+			border-radius: var(--border-radius-large);
+			background-color: var(--color-gray);
+
+		}
+	}
+
+	&Message {
+		padding: rem(18) rem(30);
+		border-radius: var(--border-radius-default);
+		border: var(--border);
+		height: rem(190);
+
+		resize: none;
+		outline: none;
+
+		&::placeholder {
+			color: var(--color-dark-gray)
+		}
+
+		&:focus {
+			border-color: var(--color-accent)
+		}
+	}
+
+	&TextAreaWrapper {
+		display: flex;
+		flex-direction: column;
+		row-gap: rem(5)
+	}
+}
+
+
+

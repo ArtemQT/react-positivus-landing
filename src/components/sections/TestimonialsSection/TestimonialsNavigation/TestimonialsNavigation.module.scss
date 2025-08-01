@@ -14,4 +14,8 @@
 	@include mobile {
 		column-gap: rem(50);
 	}
+
+	@include mobile-s {
+		column-gap: rem(40);
+	}
 }
