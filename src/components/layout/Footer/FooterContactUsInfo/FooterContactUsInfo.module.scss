@@ -1,0 +1,48 @@
+@use '@styles/mixins' as *;
+@use '@styles/media' as *;
+@use '@styles/functions' as *;
+
+.contactUs {
+
+	&Wrapper {
+		@include laptop {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
+	}
+
+	&Title {
+		width: fit-content;
+		margin-bottom: rem(30);
+
+		@include mobile {
+			margin-bottom: rem(35);
+		}
+	}
+
+	&Address {
+		display: flex;
+		flex-direction: column;
+		row-gap: rem(20);
+
+		color: var(--color-light);
+
+		@include laptop {
+			align-items: center;
+			row-gap: rem(15);
+		}
+
+		a{
+			@include hover {
+				color: var(--color-accent);
+			}
+		}
+
+		p{
+			@include mobile {
+				text-align: center;
+			}
+		}
+	}
+}

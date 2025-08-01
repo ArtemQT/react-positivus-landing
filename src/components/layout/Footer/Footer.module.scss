@@ -1,0 +1,42 @@
+@use '@styles/media' as *;
+@use '@styles/functions' as *;
+@use '@styles/mixins' as *;
+
+.footer {
+
+	@include mobile {
+		padding: 0;
+	}
+
+	&Inner {
+		background-color: var(--color-dark-footer);
+		padding: rem(55) rem(60) rem(50) rem(60);
+		margin-top: rem(70);
+		border-radius: var(--border-radius-large) var(--border-radius-large) 0 0;
+
+		@include desktop {
+			padding: rem(50) rem(20) rem(30);
+		}
+
+		@include mobile {
+			margin-top: rem(60);
+			border-radius: 0;
+		}
+
+	}
+
+	&Body {
+		display: flex;
+		justify-content: space-between;
+		gap: rem(20);
+
+		@include laptop {
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			gap: rem(35);
+		}
+
+	}
+
+}

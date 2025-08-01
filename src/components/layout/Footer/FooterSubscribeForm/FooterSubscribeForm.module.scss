@@ -1,0 +1,53 @@
+@use '@styles/media' as *;
+@use '@styles/functions' as *;
+@use '@styles/mixins' as *;
+
+.wrapper {
+	padding: rem(58) rem(40);
+	border-radius: var(--border-radius-default);
+	background-color: var(--color-dark-alt);
+
+
+	@include desktop {
+		@include flex-center();
+		padding: rem(30) rem(25);
+	}
+
+	@include mobile-s {
+		width: 100%;
+	}
+}
+
+.subscribe{
+
+	&Form {
+		display: flex;
+		gap: rem(20);
+
+		@include mobile {
+			flex-direction: column;
+		}
+
+		@include mobile-s {
+			width: 100%;
+		}
+	}
+
+	&Input {
+		padding: rem(22) rem(35);
+		border: rem(1) solid var(--color-light);
+		border-radius: var(--border-radius-default);
+
+		color: var(--color-light);
+		background-color: transparent;
+		outline: none;
+
+		&:focus {
+			border-color: var(--color-accent);
+		}
+
+		&::placeholder {
+			color: var(--color-light);
+		}
+	}
+}

@@ -1,0 +1,41 @@
+@use '@styles/media' as *;
+@use '@styles/functions' as *;
+@use '@styles/mixins' as *;
+
+.wrapper {
+	padding-top: rem(50);
+	margin-top: rem(50);
+	border-top: rem(1) solid var(--color-light);
+
+	display: flex;
+	column-gap: rem(40);
+
+	color: var(--color-light);
+
+	@include laptop {
+		justify-content: center;
+	}
+
+	@include mobile {
+		margin-top: rem(35);
+		padding-top: rem(50);
+		flex-direction: column;
+		align-items: center;
+		row-gap: rem(15);
+	}
+
+	> p {
+		margin:0;
+	}
+
+	> a{
+		text-decoration: underline;
+		@include hover {
+			color: var(--color-accent);
+		}
+
+		@include mobile {
+			text-decoration: none;
+		}
+	}
+}

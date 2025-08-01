@@ -1,0 +1,22 @@
+@use '@styles/mixins' as *;
+@use '@styles/media' as *;
+@use '@styles/functions' as *;
+
+.socials {
+
+	&List {
+		display: flex;
+		column-gap: rem(20);
+
+	}
+
+	&Item {
+
+	}
+
+	&Link {
+		@include hover {
+			transform: scale(1.2);
+		}
+	}
+}

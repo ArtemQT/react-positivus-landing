@@ -1,6 +1,6 @@
 import styles from './Header.module.scss';
 
-import Logo from "@components/layout/Header/Logo/Logo.jsx";
+import Logo from "@components/ui/Logo/Logo.jsx";
 import HeaderNavigation from "@components/layout/Header/HeaderNavigation/HeaderNavigation.jsx";
 import Button from "@components/ui/Button/Button.jsx";
 import BurgerButton from "@components/layout/Header/BurgerButton/BurgerButton.jsx";
@@ -15,7 +15,7 @@ export default function Header() {
 
 	return (
 		<header className={`${styles.header} container`}>
-			<Logo width="220" height="36" />
+			<Logo width="220" height="36" color='dark'/>
 			<HeaderNavigation isModalMenu={false} />
 			<Button mobileHidden={true} className={styles.headerButton}>Request a quote</Button>
 

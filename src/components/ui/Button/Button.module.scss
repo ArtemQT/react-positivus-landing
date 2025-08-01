@@ -11,12 +11,43 @@
 	font-weight: 400;
 	background-color: transparent;
 
-	@include hover{
+	position: relative;
+	z-index: 1;
+	overflow-x: hidden;
+
+	&::before {
+		content: '';
+
+		z-index: -1;
+		position: absolute;
+		top: 0;
+		left: -100%;
+
+		width: 100%;
+		height: 100%;
+		border-radius: inherit;
 		background-color: var(--color-accent);
+
+		transition-duration: var(--transition-duration);
+	}
+
+	@include hover{
+		border-color: transparent;
+		background-color: transparent;
+		&::before {
+			left: 0;
+		}
 	}
 
 	&--accent{
 		background-color: var(--color-accent);
+
+		@include hover{
+			color: var(--color-light);
+			&::before {
+				background-color: var(--color-dark);
+			}
+		}
 	}
 
 	&--dark {
@@ -24,7 +55,6 @@
 		background-color: var(--color-dark);
 
 		@include hover{
-			background-color: var(--color-accent);
 			color: var(--color-dark);
 		}
 	}

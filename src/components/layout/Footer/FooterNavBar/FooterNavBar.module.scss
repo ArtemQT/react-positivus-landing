@@ -1,0 +1,41 @@
+@use '@styles/mixins' as *;
+@use '@styles/media' as *;
+@use '@styles/functions' as *;
+
+.footer {
+
+	&Nav {
+
+		&List {
+			display: flex;
+			column-gap: rem(40);
+
+			@include laptop {
+				column-gap: rem(15);
+			}
+
+			@include mobile {
+				flex-direction: column;
+				row-gap: rem(20);
+				align-items: center;
+			}
+		}
+
+		&Item {
+
+		}
+
+		&Link {
+			color: var(--color-light);
+			text-decoration: underline;
+
+			&:hover {
+				color: var(--color-accent);
+			}
+
+			@include mobile {
+				text-decoration: none;
+			}
+		}
+	}
+}
