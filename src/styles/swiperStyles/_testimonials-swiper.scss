@@ -1,0 +1,37 @@
+@use '@styles/mixins' as *;
+@use '@styles/functions' as *;
+@use '@styles/media' as *;
+
+.testimonials-swiper-button {
+	&-prev, &-next {
+		padding: 0;
+		>img{
+			width: rem(30);
+			height: rem(30);
+		}
+
+		@include hover {
+			transform: scale(1.2);
+		}
+	}
+
+}
+
+.testimonials-swiper-pagination {
+	max-width: fit-content;
+	display: flex;
+	align-items: center;
+	column-gap: rem(20);
+
+	&-bullet{
+		max-width: rem(20);
+		min-height: rem(20);
+
+		>img {
+			max-width: rem(20);
+			min-height: rem(20);
+		}
+
+	}
+}
+

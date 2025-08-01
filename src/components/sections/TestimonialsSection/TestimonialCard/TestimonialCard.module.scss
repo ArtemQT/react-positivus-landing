@@ -1,0 +1,61 @@
+@use '@styles/mixins' as *;
+@use '@styles/functions' as *;
+@use '@styles/media' as *;
+
+.card {
+	$cornerWidth: rem(40);
+	$cornerPadding: rem(50);
+
+
+	@include laptop-above {
+		max-width: rem(605);
+	}
+
+	&Quote {
+		padding: rem(48) rem(52);
+		border-radius: var(--border-radius-large);
+		border: rem(1) solid var(--color-accent);
+		color: var(--color-light);
+		margin-bottom: rem(50);
+
+		position: relative;
+		&::after {
+			@include square(40);
+
+			content: '';
+
+			position: absolute;
+			bottom: 0;
+			left: $cornerPadding;
+
+			background-color: var(--color-dark);
+			rotate: 45deg;
+			translate: 0 50%;
+
+			border-right: rem(1) solid var(--color-accent);
+			border-bottom: rem(1) solid var(--color-accent);
+			z-index: 1;
+		}
+
+		@include mobile {
+			padding: rem(30)
+		}
+	}
+
+	&Author {
+		@include fluid-text(18, 20);
+
+		color: var(--color-accent);
+		font-style: normal;
+
+		&Post {
+			color: var(--color-light);
+		}
+	}
+
+	&Caption {
+		margin-left: calc($cornerPadding + $cornerWidth / 2);
+	}
+}
+
+

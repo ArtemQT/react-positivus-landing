@@ -1,0 +1,17 @@
+@use '@styles/mixins' as *;
+@use '@styles/functions' as *;
+@use '@styles/media' as *;
+
+.swiperNavigationWrapper{
+	display: flex;
+	justify-content: center;
+	column-gap: rem(200);
+
+	@include laptop {
+		column-gap: rem(100);
+	}
+
+	@include mobile {
+		column-gap: rem(50);
+	}
+}

@@ -5,6 +5,7 @@ import ServicesSection from "@components/sections/ServicesSection/ServicesSectio
 import CaseStudiesSection from "@components/sections/CaseStudiesSection/CaseStudiesSection.jsx";
 import WorkSection from "@components/sections/WorkSection/WorkSection.jsx";
 import TeamSection from "@components/sections/TeamSection/TeamSection.jsx";
+import TestimonialsSection from "@components/sections/TestimonialsSection/TestimonialsSection.jsx";
 
 export default function App() {
 	return (
@@ -17,6 +18,7 @@ export default function App() {
 				<CaseStudiesSection/>
 				<WorkSection/>
 				<TeamSection/>
+				<TestimonialsSection/>
 			</Main>
 
 		</>

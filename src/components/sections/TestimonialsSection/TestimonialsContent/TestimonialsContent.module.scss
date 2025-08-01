@@ -1,0 +1,63 @@
+@use '@styles/mixins' as *;
+@use '@styles/functions' as *;
+@use '@styles/media' as *;
+
+.testimonialsWrapper {
+	background-color: var(--color-dark);
+	border-radius: var(--border-radius-large);
+	padding-top: rem(85);
+	padding-bottom: rem(65);
+
+	display: flex;
+	flex-direction: column;
+	row-gap: rem(125);
+
+	overflow: hidden;
+
+	@include laptop {
+		padding: rem(30) rem(30) rem(60) rem(30);
+	}
+
+	@include mobile {
+		row-gap: rem(40);
+	}
+}
+
+.swiperCustom {
+
+	&Slide {
+		max-width: rem(605);
+
+		@include laptop {
+
+		}
+	}
+
+	&Assets {
+		display: flex;
+		justify-content: center;
+	}
+}
+
+.swiper {
+
+	&NavigationWrapper {
+		display: flex;
+		justify-content: center;
+
+		column-gap: rem(200);
+
+		@include laptop {
+			column-gap: rem(100);
+		}
+
+		@include mobile {
+			column-gap: rem(40);
+		}
+	}
+}
+
+
+
+
+
