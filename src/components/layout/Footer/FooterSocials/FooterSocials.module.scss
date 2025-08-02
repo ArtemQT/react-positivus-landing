@@ -8,6 +8,9 @@
 		display: flex;
 		column-gap: rem(20);
 
+		@include mobile {
+			order: 4;
+		}
 	}
 
 	&Item {

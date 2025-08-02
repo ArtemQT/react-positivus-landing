@@ -17,11 +17,13 @@
 	}
 
 	@include mobile {
-		margin-top: rem(35);
-		padding-top: rem(50);
+		margin-top: 0;
+		padding-top: rem(35);
 		flex-direction: column;
 		align-items: center;
 		row-gap: rem(15);
+
+		order: 5;
 	}
 
 	> p {

@@ -6,7 +6,7 @@ import FooterSocials from "@components/layout/Footer/FooterSocials/FooterSocials
 export default function FooterNav() {
 	return (
 		<header className={styles.footerHeader}>
-			<Logo width="180" height="29" color='light'/>
+			<Logo width="180" height="29" color='light' className={styles.footerLogo}/>
 			<FooterNavBar/>
 			<FooterSocials/>
 		</header>
