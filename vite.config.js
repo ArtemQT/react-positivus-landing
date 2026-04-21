@@ -3,13 +3,19 @@ import react from '@vitejs/plugin-react'
 import path from 'path'
 
 // https://vite.dev/config/
-export default defineConfig({
-  plugins: [react()],
-  resolve: {
-    alias: {
-      '@components': path.resolve(__dirname, './src/components'),
-      '@styles': path.resolve(__dirname, './src/styles'),
-      '@assets': path.resolve(__dirname, './src/assets'),
+export default defineConfig(({mode}) => {
+  const isProd = mode === 'production';
+
+
+  return {
+    base: isProd ? '/react-positivus-website/' : '/',
+    plugins: [react()],
+    resolve: {
+      alias: {
+        '@components': path.resolve(__dirname, './src/components'),
+        '@styles': path.resolve(__dirname, './src/styles'),
+        '@assets': path.resolve(__dirname, './src/assets'),
+      }
     }
   }
 })
