@@ -3,12 +3,9 @@ import react from '@vitejs/plugin-react'
 import path from 'path'
 
 // https://vite.dev/config/
-export default defineConfig(({mode}) => {
-  const isProd = mode === 'production';
-
-
+export default defineConfig(() => {
   return {
-    base: isProd ? '/react-positivus-landing/' : '/',
+    base: '/react-positivus-landing/',
     plugins: [react()],
     resolve: {
       alias: {
