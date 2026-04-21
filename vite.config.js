@@ -8,7 +8,7 @@ export default defineConfig(({mode}) => {
 
 
   return {
-    base: isProd ? '/react-positivus-website/' : '/',
+    base: isProd ? '/react-positivus-landing/' : '/',
     plugins: [react()],
     resolve: {
       alias: {
